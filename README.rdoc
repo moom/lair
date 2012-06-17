@@ -1,0 +1,9 @@
+== DESCRIPTION
+Lair, a wild animal's hiding place, where all the handy 'dotfiles' live on my Mac.
+
+== PREREQUISITES
+- ruby (default path: /usr/bin/ruby)
+
+== INSTALLATION
+- clone the repository into your home directory.
+- run the install script.
