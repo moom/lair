@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+home = File.expand_path(ENV['HOME'])
+
+Dir['**/*'].each do |file|
+  next if file =~ /lair|LICENSE|README|rvmrc|hg-log/
+  origin = File.join(home, ".#{File.basename(file)}.orig")
+  target = File.join(home, ".#{File.basename(file)}")
+  if File.file?(file)
+    if File.exist?(origin)
+      puts "uninstalling #{file}"
+      `mv #{origin} #{target}`
+    else
+      puts "uninstalling #{file}"
+      `rm -f #{target}`
+    end
+  end
+
+end

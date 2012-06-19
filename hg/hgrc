@@ -1,0 +1,18 @@
+[ui]
+username = Felix Wang <moom.felix@gmail.com>
+ignore=$HOME/.hgignore_global
+
+[auth]
+my.prefix = my_repo
+my.username = my_user_name
+my.password = my_password
+
+[extensions]
+rebase =
+transplant =
+
+[alias]
+slog = log --style=$HOME/lair/hg/hg-log/map-cmdline.slog
+dlog = log --style=$HOME/lair/hg/hg-log/map-cmdline.dlog
+nlog = log --style=$HOME/lair/hg/hg-log/map-cmdline.nlog
+sglog = glog --style=$HOME/lair/hg/hg-log/map-cmdline.sglog

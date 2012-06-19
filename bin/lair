@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+home = File.expand_path(ENV['HOME'])
+
+Dir['**/*'].each do |file|
+  next if file =~ /lair|LICENSE|README|rvmrc|hg-log/
+  target = File.join(home, ".#{File.basename(file)}")
+  backup = File.join(home, ".#{File.basename(file)}.orig")
+  if File.file?(file)
+    `cp #{target} #{backup}` if File.exist?(target)
+    puts "installing #{File.expand_path file} to #{target}"
+    `ln -s -i #{File.expand_path file} #{target}`
+  end
+end
