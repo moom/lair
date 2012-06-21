@@ -1,11 +1,12 @@
 [ui]
 username = Felix Wang <moom.felix@gmail.com>
-ignore=$HOME/.hgignore_global
+editor = mvim
 
 [auth]
 my.prefix = my_repo
 my.username = my_user_name
 my.password = my_password
+my.schemes = http https
 
 [extensions]
 rebase =
@@ -13,6 +14,8 @@ transplant =
 graphlog =
 
 [alias]
+kill = revert --no-backup
+kill_all = revert --no-backup --all
 slog = log --style=$HOME/lair/hg/hg-log/map-cmdline.slog
 dlog = log --style=$HOME/lair/hg/hg-log/map-cmdline.dlog
 nlog = log --style=$HOME/lair/hg/hg-log/map-cmdline.nlog
