@@ -10,6 +10,7 @@ my.password = my_password
 [extensions]
 rebase =
 transplant =
+graphlog =
 
 [alias]
 slog = log --style=$HOME/lair/hg/hg-log/map-cmdline.slog
