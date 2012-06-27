@@ -12,6 +12,7 @@ my.schemes = http https
 rebase =
 transplant =
 graphlog =
+color =
 
 [alias]
 kill = revert --no-backup
